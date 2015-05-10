@@ -53,7 +53,7 @@ $letterArray = array (
 		'U',
 		'Y' 
 );
-$name = 'Evgeniy';
+$name = $cv['Name'][0];
 if (in_array ( $name [0], $letterArray ) && ($sum % 2) == 0) {
 	$personal_data ['Job title'] = "Noob PHP";
 } elseif (in_array ( $name [0], $letterArray ) && ($sum % 2) == 1) {
@@ -82,10 +82,10 @@ foreach ( $positions as $position ) {
 	echo "<br /> *************";
 	foreach ( $position as $key => $value ) {
 		if (is_array($value)){
-			echo "<dt></dt><br /><dd><b>$key:</b> </dd>";
-		}else echo "<dt></dt><br /><dd><b>$key:</b> $value </dd>";
+			echo "<br /><b>$key:</b> ";
+		}else echo "<br /><b>$key:</b> $value";
 		foreach ( $value as $key1 => $val1 ) {
-			echo "<dt></dt><br /><dd>&nbsp;&nbsp;&nbsp;     $val1</dd>";
+			echo "<br />&nbsp;&nbsp;&nbsp;&nbsp;$val1";
 		}
 	}
 }
